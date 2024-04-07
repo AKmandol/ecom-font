@@ -9,7 +9,7 @@
             
             
 
-            <div class="row m-0 p-0 bg-white">
+            <div class="row m-0 p-0 bg-light-cus">
 
                 <div class="mx-auto d-none d-lg-block m-0 p-0">
                     <sidebarLeft></sidebarLeft>
@@ -27,7 +27,7 @@
             
             </div>
             
-            <div class="row m-0 p-0">
+            <div v-if="this.$route.path =='/'" class="mr-x" :class="this.$store.state.left ? 'left-custom' : 'no-left-cart' ">
                 <div class="col-12 m-0 p-0"><footerMenu></footerMenu></div>
             </div>
 
@@ -97,7 +97,7 @@
 
 @media(max-width: 991px){
     .left-custom{
-        width: calc(100vw - 10px) !important;
+        width: 100vw !important;
         margin-left: 0px !important;
         margin-right: 0;
         padding: 0;
@@ -122,7 +122,7 @@
 }
 
 .bg-light-cus {
-    background: #D6D6D6;
+    background: #e7e7e7;
 }
 
 .mr-x{
@@ -140,11 +140,10 @@
 }
 
 .left-custom{
-    width: calc(100vw - 400px);
-    margin-left: 300px;
+    width: calc(100vw - 250px);
+    margin-left: 250px;
     padding: 0;
 }
-
 
 /* Scrool Bar */
 ::-webkit-scrollbar {

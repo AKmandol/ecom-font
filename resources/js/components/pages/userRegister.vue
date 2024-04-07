@@ -5,9 +5,13 @@
           <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5 mt-5">
-                <div class="card bg-card shadow mt-70">
+
+                <div class="text-center mb-4">
+                  <img src="/img/logo_white.png" class="" height="70" alt="">
+                </div>
+
+                <div class="card bg-card shadow">
   
-                  <img src="/img/logo_dark.png" class="px-6 image position-absolute start-50 translate-middle" height="70" alt="">
                   <h3 class="fw-bold mb-2 text-dark fw-bold p-3 text-center rounded-two bg-white">Register Your Account</h3>
   
                   <div class="card-body p-2 p-md-5 text-center">
@@ -180,25 +184,26 @@
   </script>
   
   <style scoped>
-    @media(max-width: 991px){
-        .m-x{
-            width: 100vw;
-            margin-left: -292px !important;
-        }
-    } 
-  .image {
-    top: -35px;
-    background: #ffffff;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top: 3px solid #047166;
-    border-left: 3px solid #047166;
-    border-right: 3px solid #047166;
+  .m-x{
+    width: 100vw;
+    margin-left: -300px !important;
+  }
+
+  @media(max-width: 991px){
+      .m-x{
+          width: 100vw;
+          margin-left: 0px !important;
+      }
+  }
+
+  @media(max-width: 765px){
+      .m-x{
+          padding-top: 65px;
+      }
   }
   
-  .mt-70{
-    margin-top: 100px;
-  }
+  
+ 
   .bg-card {
     background-repeat: no-repeat;
     background-position: center center;

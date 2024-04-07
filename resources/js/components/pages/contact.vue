@@ -138,12 +138,20 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="m-x">
+            <footerMenu></footerMenu>
+        </div>
+
+</div>
 </template>
   
 <script>
-
+import footerMenu from "./footer.vue"
 export default {
+    components: {
+        footerMenu,
+    },
 
 data(){
     return {
@@ -183,7 +191,7 @@ async created(){
 
 .m-x{
     width: 100vw;
-    margin-left: -300px !important;
+    margin-left: -250px !important;
 }
 
 @media(max-width: 991px){
@@ -198,7 +206,6 @@ async created(){
         padding-top: 65px;
     }
 }
-
 
 .px-custom{
     padding-left: 20px !important;

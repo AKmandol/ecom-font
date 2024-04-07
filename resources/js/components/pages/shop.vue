@@ -10,7 +10,7 @@
     </nav> -->
 
     <div class="container">
-      <div class="row justify-content-center gap-1 bg-light-cus rounded">
+      <div class="row justify-content-center gap-1 border shadow rounded">
 
         <div class="d-flex border-custom-rd justify-content-start aling-items-center rounded p-3">
           <b-icon-box-arrow-in-right class="text-white my-auto mx-2" width="20" height="20" ></b-icon-box-arrow-in-right>
@@ -683,7 +683,7 @@
         
       </div>
 
-      <div class="row justify-content-center gap-1 bg-light-cus rounded my-4">
+      <div class="row justify-content-center gap-1 border shadow rounded my-4">
 
         <div class="d-flex border-custom-rd justify-content-start aling-items-center rounded p-3">
           <b-icon-box-arrow-in-right class="text-white my-auto mx-2" width="20" height="20" ></b-icon-box-arrow-in-right>

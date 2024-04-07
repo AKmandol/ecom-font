@@ -5,7 +5,7 @@
 
             <div class="row my-5 main-color">
 
-                <div class="col-lg-5"> 
+                <div class="col-lg-5 text-center"> 
                 
                     <img src="assets/homeLeft.jpg" class="img-fluid rounded-right" alt="..." />
                     
@@ -569,6 +569,7 @@ export default {
     .m-x{
         width: 100%;
         padding:  0;
+        margin-top: 0px
     }
 }
 

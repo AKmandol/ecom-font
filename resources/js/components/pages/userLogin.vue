@@ -312,12 +312,24 @@
   </script>
   
   <style scoped>
-   @media(max-width: 991px){
-        .m-x{
-            width: 100vw;
-            margin-left: -292px !important;
-        }
-   }
+  .m-x{
+    width: 100vw;
+    margin-left: -300px !important;
+  }
+
+  @media(max-width: 991px){
+      .m-x{
+          width: 100vw;
+          margin-left: 0px !important;
+      }
+  }
+
+  @media(max-width: 765px){
+      .m-x{
+          padding-top: 65px;
+      }
+  }
+
   .bg-x {
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -325,12 +337,14 @@
     width: 100vw;
     margin-left: -105px;
   }   
+
   .bg-card {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.83), rgba(94, 21, 21, 0.585)), url("/assets/constration.jpg");
     border: 3px solid #047166;
     border-radius: 30px;
+    max-width: 500px;
   }
   .mt-70{
     margin-top: 70px;

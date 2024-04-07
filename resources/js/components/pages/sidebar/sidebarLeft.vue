@@ -174,7 +174,7 @@
 
                 </div>
 
-                <div class="py-2 d-flex mt-auto left-fotter">
+                <div class="py-2 d-flex com">
                             
                     <div class="col-6 d-flex align-items-center justify-content-center border-end">
                         <router-link to="/faq" class="text-dark"><b-icon-question-lg class="text-warning mr-2 d-inline" width="20" height="20"></b-icon-question-lg>About Us</router-link>       
@@ -368,19 +368,27 @@
     .sidebarLeft {
         background: #fff;
         min-width: 250px;
-        overflow: hidden;;
+        overflow: hidden;
         position: fixed;
         top: 73px;
         left:0;
         z-index: 900;
         border-right: .5px solid rgb(212, 212, 212);
-        max-height: 70vh;
+        height: 100vh;
         overflow: scroll;
         /* transition: all 1s all ease-in-out; */
     }
 
-    .man-height{
+    .com {
         height: max-content;
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+    }
+
+    .man-height{
+        max-height: 450px;
         overflow-y: scroll;
         padding-bottom: 40px;
     }
@@ -395,6 +403,10 @@
     .ivu-menu{
         background: #ffffff;
         overflow: scroll
+    }
+
+    .ivu-menu-submenu ul{
+        background: #E7E7E7;
     }
 
     .bg-card{

@@ -1,14 +1,14 @@
 <template>
     <div>
-        <div class="bg-footer border-top shadow-sm text-dark pt-3">
-            <div class="container mx">
+        <div class="bg-footer container-fluid pt-3 w-100">
+            <div class="container">
                 <footer class="mx-auto">
                     <div class="row">
 
-                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3 px-0">
+                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3">
                             <h5 class="mb-4 text-white fw-bold font"><b>Company Overview</b></h5>
 
-                            <div class="d-flex flex-column justify-content-start">
+                            <div class="d-flex flex-column justify-content-start ">
                                 
                                 <p class="mb-0 pb-0 text-light">
                                 <kbd class="fw-bold">Shop Today</kbd> was establish at 2003.
@@ -16,9 +16,13 @@
                                 over Bangladesh. We are the most <b>reliable</b> and <b>secure</b>
                                 E-commerce company in the country.
                                 </p>
-                                <router-link to="/">
-                                    <img src="img/logo_dark.png" class="d-md-none d-lg-block mt-2" height="60" alt="Logo not found">
-                                </router-link>
+                                <div class="d-flex flex-row justify-content-center gap-3 mt-1">
+                                    <b-icon-facebook width="24" height="24" class="header-icon text-primary"></b-icon-facebook>
+                                    <b-icon-instagram width="24" height="24" class="header-icon text-danger"></b-icon-instagram>
+                                    <b-icon-whatsapp width="24" height="24" class="header-icon text-success"></b-icon-whatsapp>
+                                    <b-icon-twitter width="24" height="24" class="header-icon text-primary"></b-icon-twitter>
+                                    <b-icon-youtube width="24" height="24" class="header-icon text-danger"></b-icon-youtube>
+                                </div>
                             </div>
                             
                         </div>
@@ -26,7 +30,7 @@
                         <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3">
                             <h5 class="mb-4 text-md-center text-sm-start text-white fw-bold font"><b>Usefull Links</b></h5>
                             <ul class="nav d-grid gap-1">
-                                <li class="nav-item mb-2"><router-link to="/location" class="nav-link p-0 text-dark text-md-center text-sm-start"> Contact Us </router-link></li>
+                                <li class="nav-item mb-2"><router-link to="/contact" class="nav-link p-0 text-dark text-md-center text-sm-start"> Contact Us </router-link></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> About Us </a></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Pricing </a></li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Coupon </a></li>
@@ -45,23 +49,14 @@
 
                         <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3 text-dark">
                             <h5 class="mb-4 text-white fw-bold font"><b>We accept</b></h5>
-                            <p class="text-light"><b>Safe</b> and <b>Secure</b> Payment</p>
+                            <p class="text-light"><b class="text-primary">Safe</b> and <b class="text-primary">Secure</b> Payment</p>
                             <div class="text-left">
-                                <img src="assets/patment-icon.png" class="img img-fluid bg-white rounded p-2 my-2" alt="Logo not found">
-                            </div>
-                            
-                            <p class="text-light">Join Us on : </p>
-                            <div class="d-flex flex-row justify-content-center gap-3 mt-1">
-                                <b-icon-facebook width="24" height="24" class="header-icon text-primary"></b-icon-facebook>
-                                <b-icon-instagram width="24" height="24" class="header-icon text-danger"></b-icon-instagram>
-                                <b-icon-whatsapp width="24" height="24" class="header-icon text-success"></b-icon-whatsapp>
-                                <b-icon-twitter width="24" height="24" class="header-icon text-primary"></b-icon-twitter>
-                                <b-icon-youtube width="24" height="24" class="header-icon text-danger"></b-icon-youtube>
+                                <img src="assets/payments.png" class="img img-fluid p-2 my-2" alt="Logo not found">
                             </div>
                         </div>
 
-                        <div class="text-center text-white mt-3 pb-0">
-                            <p>&copy; 2023 Shop Today, Inc. All rights reserved.</p>
+                        <div class="text-center text-white mt-3 py-3">
+                            <p>&copy; 2024 Shop Today, Inc. All rights reserved.</p>
                         </div>
 
                     </div>
@@ -69,7 +64,6 @@
             </div>
         </div>
 
-        <!-- <BackTop class="back-to-top" :bottom="100"></BackTop> -->
         <BackTop class="top" :bottom="100">
                 <div class="back-to-top">
                     <b-icon-arrow-up-square width="30" height="30" class="header-icon text-secondary"></b-icon-arrow-up-square>
@@ -98,12 +92,10 @@ export default {
 }
 .bg-footer { 
     border-top: 1px solid #d8eaff;
-    background: #03413a;
+    background: #022924;
     background-image: url("/assets/bg.png");
     background-position: center; /* Center the image */
     background-repeat: repeat; /* Do not repeat the image */
-    position: relative;
-    z-index: 1000;
     padding: 0;
     margin: 0;
 }
