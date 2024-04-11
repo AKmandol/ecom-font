@@ -7,7 +7,7 @@ const store = createStore({
     count: 0,
     modelLogin: false,
     modelRegister: false,
-    left: true,
+    left: false,
     right: false
   },
 

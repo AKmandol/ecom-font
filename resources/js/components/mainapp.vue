@@ -11,10 +11,6 @@
 
             <div class="row m-0 p-0 bg-light-cus">
 
-                <div class="mx-auto d-none d-lg-block m-0 p-0">
-                    <sidebarLeft></sidebarLeft>
-                </div>
-
                 <div class="mr-x" :class="this.$store.state.left ? 'left-custom' : 'no-left-cart' " >
                 
                     <router-view></router-view>
@@ -25,10 +21,6 @@
                     <sidebarRight></sidebarRight>
                 </div> -->
             
-            </div>
-            
-            <div v-if="this.$route.path =='/'" class="mr-x" :class="this.$store.state.left ? 'left-custom' : 'no-left-cart' ">
-                <div class="col-12 m-0 p-0"><footerMenu></footerMenu></div>
             </div>
 
             <ModalDetails></ModalDetails>
@@ -45,20 +37,15 @@
 <script>
 
     import navmenu from "./pages/nav.vue"
-    import footerMenu from "./pages/footer.vue"
     import ModalDetails from "./pages/modal/modalDetails.vue"
 
-    import sidebarLeft from "./pages/sidebar/sidebarLeft.vue"
     //import sidebarRight from "./pages/sidebar/sidebarRight.vue"
 
     export default {
         name: "mainapp",
         components: {
             navmenu,
-            footerMenu,
             ModalDetails,
-            sidebarLeft,
-           
         },
 
 
@@ -98,9 +85,8 @@
 @media(max-width: 991px){
     .left-custom{
         width: 100vw !important;
-        margin-left: 0px !important;
-        margin-right: 0;
-        padding: 0;
+        margin: 0px !important;
+        padding: 0px;
     }
 }
 
@@ -126,10 +112,10 @@
 }
 
 .mr-x{
-    margin-left:  0;
-    margin-right:  0;
+    margin:  0px;
     transition: all .3s ease-in-out;
-    padding: 0;
+    padding: 0px;
+    overflow: hidden;
 }
 
 /* .no-left-cart{

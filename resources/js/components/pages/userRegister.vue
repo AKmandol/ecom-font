@@ -89,13 +89,22 @@
           </div>
       </Modal>
   
-  
+      <div>
+          <div class="col-12 m-0 p-0">
+            <footerMenu></footerMenu>
+          </div>
+      </div>
+
     </div>
 </template>
   
   <script>
-  import { result } from 'lodash';
+  import footerMenu from "./footer.vue"
   export default {
+      components: {
+        footerMenu,
+      },
+
       data(){
         return{
           data:{
@@ -175,35 +184,18 @@
         async loginUser(){
           this.$router.push('/user-login');
         } 
-        
-        
   
   
-      }    
+      },
+      
+      mounted(){
+        this.$store.state.left = false;
+      } 
   }
   </script>
   
   <style scoped>
-  .m-x{
-    width: 100vw;
-    margin-left: -300px !important;
-  }
 
-  @media(max-width: 991px){
-      .m-x{
-          width: 100vw;
-          margin-left: 0px !important;
-      }
-  }
-
-  @media(max-width: 765px){
-      .m-x{
-          padding-top: 65px;
-      }
-  }
-  
-  
- 
   .bg-card {
     background-repeat: no-repeat;
     background-position: center center;
@@ -217,7 +209,6 @@
     background-position: center center;
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.703), rgba(0, 0, 0, 0.741)), url("/assets/regiserBack.webp");
     width: 100vw;
-    margin-left: -105px;
   }
   
   .rounded-two{

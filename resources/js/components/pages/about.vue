@@ -5,7 +5,7 @@
             <div class="spinner"></div>
         </div>
        
-        <div class="container-fluid m-x main bg-dark mb-5 position-relative mt-50">
+        <div class="container-fluid main bg-dark mb-5 position-relative">
   
             <div class="row">
                 <h1 class="text-center text-dark fw-bold display-2">About Us</h1>
@@ -32,7 +32,7 @@
         </div>
        
   
-        <div class="m-x my-4">
+        <div class="my-4 p-x">
             <div class="container">
                 <div class="row mx-auto">
 
@@ -57,7 +57,7 @@
         </div>
 
 
-        <div class="m-x">
+        <div>
             <footerMenu></footerMenu>
         </div>
         
@@ -72,22 +72,26 @@ export default {
         footerMenu,
     },
 
-data(){
-    return {
-        isLoading: true,
-        about:null,
-        faq:null,
-        value:1,
-        }
+    data(){
+        return {
+            isLoading: true,
+            about:null,
+            faq:null,
+            value:1,
+            }
+        },
+
+    methods: {
+
     },
 
-methods: {
+    mounted(){
+        this.$store.state.left = false;
+    },
 
-},
-
-async created(){
-    
-}
+    async created(){
+        
+    }
 
 }
 
@@ -95,20 +99,8 @@ async created(){
   
 <style scoped>
 
-
-.m-x{
-    width: 100vw;
-    margin-left: -250px !important;
-}
-
-@media(max-width: 991px){
-    .m-x{
-        width: 100vw;
-        margin-left: 0px !important;
-    }
-}
 @media(max-width: 765px){
-    .m-x{
+    .p-x{
         padding-top: 65px;
     }
 }

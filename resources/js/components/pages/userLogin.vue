@@ -1,7 +1,7 @@
 <template>
     <div>
       
-      <div class="container-fluid m-x bg-x">
+      <div class="container-fluid bg-x">
         <div class="container pb-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5 p-sm-0 mt-5">
@@ -124,13 +124,22 @@
   
           </div>
       </Modal>
-  
+
+      <div>
+          <div class="col-12 m-0 p-0">
+            <footerMenu></footerMenu>
+          </div>
+      </div>
   
     </div>
 </template>
   
   <script>
+  import footerMenu from "./footer.vue"
   export default {
+      components: {
+        footerMenu,
+      },
       data(){
         return{
           showPassword: false,
@@ -307,35 +316,21 @@
         
   
   
+      },
+      
+      mounted(){
+        this.$store.state.left = false;
       }    
   }
   </script>
   
   <style scoped>
-  .m-x{
-    width: 100vw;
-    margin-left: -300px !important;
-  }
-
-  @media(max-width: 991px){
-      .m-x{
-          width: 100vw;
-          margin-left: 0px !important;
-      }
-  }
-
-  @media(max-width: 765px){
-      .m-x{
-          padding-top: 65px;
-      }
-  }
-
+ 
   .bg-x {
     background-repeat: no-repeat;
     background-size: cover !important;
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.703), rgba(0, 0, 0, 0.741)), url("/assets/constration.jpg");
     width: 100vw;
-    margin-left: -105px;
   }   
 
   .bg-card {

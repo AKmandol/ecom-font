@@ -4,6 +4,7 @@ import UserLogin from './components/pages/userLogin.vue'
 import ResisterLogin from './components/pages/userRegister.vue'
 import Home from './components/pages/home-product.vue'
 import SideCart from './components/pages/sidebar/sideCart.vue'
+import OrderDetails from './components/pages/order-details.vue'
 import ShopPage from './components/pages/shop.vue'
 import LocationPage from './components/pages/location.vue'
 import Faq from './components/pages/faq.vue'
@@ -82,8 +83,12 @@ const routes = [
     component: userDashboard 
   },
 
-
-
+  //Order
+  { 
+    path: '/order-details', 
+    name: '/OrderDetails',
+    component: OrderDetails 
+  },
 
  
   { 

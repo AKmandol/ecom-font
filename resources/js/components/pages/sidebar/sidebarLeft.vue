@@ -1,6 +1,5 @@
 <template>
-    <div v-if="this.$route.path =='/'">
-
+    <div>
         <div class="row mx-0 px-0 sidebarLeft2" @click="toggleLeftBar" :style="menuItem">
             <div class="d-flex mx-0 px-0 align-items-center rounded-0 borderRight">
                 <b-icon-arrow-right-square-fill class="mx-auto arrow" width="25" height="25"></b-icon-arrow-right-square-fill>  
@@ -303,27 +302,27 @@
 <style>
     /* transtion */ 
     .slideFadeLeft-enter-from {
-    opacity: 0;
-    transform: translateX(-250px);
+        opacity: 0;
+        transform: translateX(-250px);
     }
     .slideFadeLeft-enter-to {
-    opacity: 1;
-    transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
     .slideFadeLeft-enter-active {
-    transition: all .5s ease;
+        transition: all .5s ease;
     }
 
     .slideFadeLeft-leave-from {
-    opacity: 1;
-    transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
     .slideFadeLeft-leave-to {
-    opacity: 0;
-    transform: translateX(-250px);
+        opacity: 0;
+        transform: translateX(-250px);
     }
     .slideFadeLeft-leave-active {
-    transition: all .5s ease;
+        transition: all .5s ease;
     }
 
 

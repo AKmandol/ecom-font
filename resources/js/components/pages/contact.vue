@@ -5,7 +5,7 @@
             <div class="spinner"></div>
         </div>
        
-        <div class="container-fluid m-x  bg-dark mb-5 position-relative mt-50">
+        <div class="container-fluid bg-dark mb-5 position-relative">
 
             <div class="row">
                 <iframe class="m-0 p-0 border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473352.62217123056!2d91.98677707943028!3d22.047018614001473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad87c0002f69cd%3A0xbfb6392c4dba1529!2sMember%20Para!5e0!3m2!1sen!2sbd!4v1680704358161!5m2!1sen!2sbd" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -35,11 +35,11 @@
         </div>
        
   
-        <div class="m-x my-4">
+        <div class="my-4 p-x">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-7 col-md-12 mx-auto border-right rounded bg-light m-0 p-0">
+                    <div class="col-lg-7 col-md-12 mx-auto border-right rounded bg-light p-0 my-2">
 
                         <div class="mb-3 border p-3 border-custom-rd  rounded">
                             <h3 class="text-dark fw-bold text-center">Feel free to contact us</h3>
@@ -104,7 +104,7 @@
 
                     </div>
 
-                    <div class="col-lg-4 col-md-12 mx-auto rounded bg-light p-0">
+                    <div class="col-lg-4 col-md-12 mx-auto rounded bg-light p-0 my-2">
 
                         <div class="mb-3 border py-3 px-0 rounded border-custom-rd">
                             <h3 class="text-dark fw-bold text-center">Our Location</h3>
@@ -139,7 +139,7 @@
             </div>
         </div>
 
-        <div class="m-x">
+        <div>
             <footerMenu></footerMenu>
         </div>
 
@@ -153,34 +153,38 @@ export default {
         footerMenu,
     },
 
-data(){
-    return {
-        isLoading: true,
-        loading: false,
-        errors:{},
-        about:null,
-        faq:null,
-        value:1,
+    data(){
+        return {
+            isLoading: true,
+            loading: false,
+            errors:{},
+            about:null,
+            faq:null,
+            value:1,
 
-        formValidate: {
-            name: '',
-            email: '',
-            phone: '',
-            msg: ''
+            formValidate: {
+                name: '',
+                email: '',
+                phone: '',
+                msg: ''
+            },
+        }
+    },
+
+    methods: {
+
+        hasError(fieldName){
+            return (fieldName in this.errors);
         },
+    },
+
+    mounted(){
+        this.$store.state.left = false;
+    },
+
+    async created(){
+        
     }
-    },
-
-methods: {
-
-    hasError(fieldName){
-        return (fieldName in this.errors);
-    },
-},
-
-async created(){
-    
-}
 
 }
 
@@ -188,21 +192,8 @@ async created(){
   
 <style scoped>
 
-
-.m-x{
-    width: 100vw;
-    margin-left: -250px !important;
-}
-
-@media(max-width: 991px){
-    .m-x{
-        width: 100vw;
-        margin-left: 0px !important;
-    }
-}
-
 @media(max-width: 765px){
-    .m-x{
+    .p-x{
         padding-top: 65px;
     }
 }

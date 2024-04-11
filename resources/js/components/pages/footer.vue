@@ -5,16 +5,16 @@
                 <footer class="mx-auto">
                     <div class="row">
 
-                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3">
+                        <div class="col-sm-12 col-lg-3 col-md-6 text-center py-3">
                             <h5 class="mb-4 text-white fw-bold font"><b>Company Overview</b></h5>
 
-                            <div class="d-flex flex-column justify-content-start ">
+                            <div class="d-flex flex-column justify-content-center">
                                 
                                 <p class="mb-0 pb-0 text-light">
-                                <kbd class="fw-bold">Shop Today</kbd> was establish at 2003.
-                                Our motive was to make online market available in all
-                                over Bangladesh. We are the most <b>reliable</b> and <b>secure</b>
-                                E-commerce company in the country.
+                                    <kbd class="fw-bold">Shop Today</kbd> was establish at 2003.
+                                    Our motive was to make online market available in all
+                                    over Bangladesh. We are the most <b>reliable</b> and <b>secure</b>
+                                    E-commerce company in the country.
                                 </p>
                                 <div class="d-flex flex-row justify-content-center gap-3 mt-1">
                                     <b-icon-facebook width="24" height="24" class="header-icon text-primary"></b-icon-facebook>
@@ -27,31 +27,31 @@
                             
                         </div>
 
-                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3">
-                            <h5 class="mb-4 text-md-center text-sm-start text-white fw-bold font"><b>Usefull Links</b></h5>
+                        <div class="col-sm-12 col-lg-3 col-md-6 text-center py-3">
+                            <h5 class="mb-4 text-white fw-bold font"><b>Usefull Links</b></h5>
                             <ul class="nav d-grid gap-1">
-                                <li class="nav-item mb-2"><router-link to="/contact" class="nav-link p-0 text-dark text-md-center text-sm-start"> Contact Us </router-link></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> About Us </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Pricing </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Coupon </a></li>
+                                <li class="nav-item mb-2"><router-link to="/contact" class="nav-link p-0 text-dark"> Contact Us </router-link></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> About Us </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Pricing </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Coupon </a></li>
                             </ul>
                         </div>
 
-                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3">
-                            <h5 class="mb-4 text-md-center text-sm-start text-white fw-bold font"><b>Quick Links</b></h5>
+                        <div class="col-sm-12 col-lg-3 col-md-6 text-center py-3">
+                            <h5 class="mb-4 text-white fw-bold font"><b>Quick Links</b></h5>
                             <ul class="nav d-grid gap-1">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Home </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Shop </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> Offer Product </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-md-center text-sm-start"> New Product</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Home </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Shop </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Offer Product </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> New Product</a></li>
                             </ul>
                         </div>
 
-                        <div class="col-sm-12 col-lg-3 col-md-12 text-md-center py-3 text-dark">
+                        <div class="col-sm-12 col-lg-3 col-md-6 text-center py-3 text-dark">
                             <h5 class="mb-4 text-white fw-bold font"><b>We accept</b></h5>
                             <p class="text-light"><b class="text-primary">Safe</b> and <b class="text-primary">Secure</b> Payment</p>
-                            <div class="text-left">
-                                <img src="assets/payments.png" class="img img-fluid p-2 my-2" alt="Logo not found">
+                            <div class="text-center">
+                                <img src="assets/payments.png" class="img p-2 my-2" width="250" alt="Logo not found">
                             </div>
                         </div>
 

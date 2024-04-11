@@ -533,15 +533,32 @@
             </div>
             
         </div>
+
+        <div class="mx-auto d-none d-lg-block m-0 p-0">
+            <sidebarLeft></sidebarLeft>
+        </div>
+
+
+        <div class="mr-x" :class="this.$store.state.left ? 'left-custom' : 'no-left-cart' ">
+            <div class="col-12 m-0 p-0"><footerMenu></footerMenu></div>
+        </div>
+
+
     </div>
 </template>
 
 <script>
 import Shop from "./shop.vue";    
+import footerMenu from "./footer.vue"
+import sidebarLeft from "./sidebar/sidebarLeft.vue"
+
+
 export default {
 
     components: {
-        Shop
+        Shop,
+        footerMenu,
+        sidebarLeft
     },
 
     data() {
@@ -556,15 +573,27 @@ export default {
 
     methods: {
         
+    },
+
+    mounted(){
+        this.$store.state.left = true;
     }
 }
 </script>
 
 <style scoped>
 
+.mr-x{
+    margin-left:  0;
+    margin-right:  0;
+    transition: all .3s ease-in-out;
+    padding: 0;
+}
+
 .m-x {
     margin-top: 80px ;
 }
+
 @media(max-width: 991px){
     .m-x{
         width: 100%;
