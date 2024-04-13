@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div v-if="isLoading" class="preloader">
+            <div class="loader"></div>
+        </div>
+
         <div class="container-fluid m-x">
            
 
@@ -563,6 +567,7 @@ export default {
 
     data() {
         return {
+            isLoading: true,
             size: '',
             color: '',
             qty: 1,
@@ -577,6 +582,12 @@ export default {
 
     mounted(){
         this.$store.state.left = true;
+    },
+
+    created(){
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 500);    
     }
 }
 </script>

@@ -33,7 +33,7 @@
                                 </router-link>
                             </div>
 
-                            <div class="nav-item col-lg-6 col-md-12 d-flex align-items-center justify-content-md-start justify-content-lg-center p-2 p-lg-0">
+                            <div class="nav-item col-lg-5 col-md-12 d-flex align-items-center justify-content-md-start justify-content-lg-center p-2 p-lg-0">
                                 <form role="search" class="col-12 mx-auto">
                                     <input type="search" class="form-control" placeholder="Search for Product ..." aria-label="Search">
                                 </form>
@@ -51,11 +51,25 @@
                             </div>
 
 
-                            <div class="nav-item col-lg-1 col-md-12 d-flex align-items-center justify-content-center justify-content-lg-end p-2 p-lg-0 m-0">
-                                <a class="p-0" href="/user-login">
-                                    <img src="img/man.webp"  class="text-dark border p-1 rounded-circle text-dark bg-seconary" width="35" height="35" />
-                                </a>
+                            <div class="nav-item col-lg-2 col-md-12 d-flex align-items-center justify-content-center justify-content-lg-end p-0 m-0">
+                                <Dropdown>
+                                    <a href="javascript:void(0)">
+                                        <img src="img/man.webp"  class="me-2 border p-1 rounded-circle text-dark bg-seconary" width="35" height="35" />
+                                        <span :style="headerStyles">Amlan kumar...</span>
+                                        <Icon type="ios-arrow-down"></Icon>
+                                    </a>
+                                    <template #list>
+                                        <DropdownMenu>
+                                            <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Login</router-link></DropdownItem>
+                                            <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Logout</router-link></DropdownItem>
+                                            <DropdownItem><router-link :style="headerStylesDrop" to="/resister-user"><b-icon-capslock width="16" height="16" class="me-1 text-secondary"></b-icon-capslock> Register</router-link></DropdownItem>
+                                            <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-cart width="16" height="16" class="me-1 text-secondary"></b-icon-cart> Order</router-link></DropdownItem>
+                                            <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-person width="16" height="16" class="me-1 text-secondary"></b-icon-person> Profile</router-link></DropdownItem>
+                                        </DropdownMenu>
+                                    </template>
+                                </Dropdown>
                             </div>
+
                             <!-- <div class="nav-item col-lg-1 col-md-12 d-flex align-items-center justify-content-center justify-content-lg-end p-2 p-lg-0 m-0">
                                 <router-link class="bg-success rounded-circle p-1" to="/user-login"><b-icon-person width="22" height="22" class="mr-2 nav-cart" :style="headerStyles"></b-icon-person></router-link>
                             </div> -->
@@ -225,8 +239,32 @@
                                     </MenuGroup>
                                 </Submenu>
 
-                            </Menu>
+                                <Dropdown class="mt-2 text-center">
+                                <a href="javascript:void(0)">
+                                    <img src="img/man.webp"  class="border p-1 rounded-circle text-dark bg-seconary me-2" width="35" height="35" />
+                                    <span class="text-light">Amlan kumar...</span>
+                                    <Icon type="ios-arrow-down"></Icon>
+                                </a>
+                                <template #list>
+                                    <DropdownMenu>
+                                        <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Login</router-link></DropdownItem>
+                                        <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Logout</router-link></DropdownItem>
+                                        <DropdownItem><router-link :style="headerStylesDrop" to="/resister-user"><b-icon-capslock width="16" height="16" class="me-1 text-secondary"></b-icon-capslock> Register</router-link></DropdownItem>
+                                        <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-cart width="16" height="16" class="me-1 text-secondary"></b-icon-cart> Order</router-link></DropdownItem>
+                                        <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-person width="16" height="16" class="me-1 text-secondary"></b-icon-person> Profile</router-link></DropdownItem>
+                                    </DropdownMenu>
+                                </template>
+                            </Dropdown>
 
+                            </Menu>
+                            <div class="py-2 d-flex">
+                                <div class="col-6 d-flex align-items-center justify-content-center border-end">
+                                    <router-link to="/faq" class="text-light"><b-icon-question-lg class="text-warning p-1 d-inline" width="28" height="28"></b-icon-question-lg>About Us</router-link>       
+                                </div>
+                                <div class="col-6 d-flex align-items-center justify-content-center border-start">
+                                    <a @click="this.$store.state.complaintModal = true" class="text-light"><b-icon-chat-fill class="text-danger p-1 d-inline" width="28" height="28"></b-icon-chat-fill>Complaint</a> 
+                                </div>
+                            </div>
                         </ul>
 
 
@@ -247,6 +285,9 @@
             </div>
         </a>
 
+       <!-- Complaint modal -->
+       <ComplaintModal></ComplaintModal>
+
     </div>
 
     
@@ -256,17 +297,20 @@
 
  
 import cart from './../pages/sidebar/sideCart.vue';
+import ComplaintModal from './../pages/modal/comlaint.vue';
 
 export default {
     name: "navmenu",
 
     components: {
-    cart
-
+    cart,
+    ComplaintModal
     },
 
     data() {
         return {  
+            complaintModal: false,
+            complaint_modal_loading: false,
             count: 0,
             left: true,
             right: true,
@@ -274,12 +318,18 @@ export default {
                 color: '#000',
                 background:'#fff',
                 img: '/img/logo_dark.png',
+                overflow: 'visible'
             },
             
             headerStylesBtn: {
                 color: '#000',
                 borderRadius: '5px'
             },
+            
+            headerStylesDrop: {
+                color: '#000',
+                background:'#fff',
+             },
             
         }
     },
@@ -300,12 +350,16 @@ export default {
                 this.headerStyles.img = '/img/logo_white.png'; // Change to desired background color/image
                 this.headerStylesBtn.color = '#fff'; // Change to desired background color/image
                 this.headerStylesBtn.background = '#047166'; // Change to desired background color/image
+                this.headerStylesDrop.color = '#000'; // Change to desired background color/image
+                this.headerStylesDrop.background = '#fff'; // Change to desired background color/image
             }else{ 
                 this.headerStyles.background = '#fff';
                 this.headerStyles.color = '#000';
                 this.headerStyles.img = '/img/logo_dark.png';
                 this.headerStylesBtn.color = '#000';
                 this.headerStylesBtn.background = '#fff';
+                this.headerStylesDrop.color = '#000';
+                this.headerStylesDrop.background = '#fff';
             }
         },
 
@@ -338,14 +392,18 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
+
+ 
+
+/* .ivu-select-dropdown{
+    width: 180px;
+ } */
 
 .menu-main{
-    overflow-y: scroll;
     padding-bottom: 40px;
     background: transparent !important;
     width: 100% !important;
-    position: static;
 }
 
 .submenu {
@@ -412,7 +470,7 @@ export default {
     padding: 5px 0;
     box-shadow: .5px .5px #03695f45;
     position: fixed;
-    z-index: 10005;
+    z-index: 1000;
 }
 
 .main-color{

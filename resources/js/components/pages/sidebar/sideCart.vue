@@ -145,12 +145,12 @@
             </div>
 
             <div class="drawer-footer my-auto">
-                <button class="btn btn-success main-color col-12 mx-auto text-center fw-bold fs-5" @click="sideCart">
-                    <b-icon-cart-check-fill class="text-warning d-inline mr-2" width="25" height="25" ></b-icon-cart-check-fill>
-                    <router-link class="text-white" to="/order-details">
+                <router-link class="text-white" to="/order-details">
+                    <button class="btn btn-success main-color col-12 mx-auto text-center fw-bold fs-5" @click="sideCart">
+                        <b-icon-cart-check-fill class="text-warning d-inline mr-2" width="25" height="25" ></b-icon-cart-check-fill>
                         Place Order
-                    </router-link>
-                </button>
+                    </button>
+                </router-link>
             </div>
 
         </Drawer>

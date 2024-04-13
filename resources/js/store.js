@@ -4,6 +4,7 @@ import { createStore } from 'vuex'
 const store = createStore({
   state: {
     RightCartSlide: false,
+    complaintModal: false,
     count: 0,
     modelLogin: false,
     modelRegister: false,

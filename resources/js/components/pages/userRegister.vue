@@ -1,5 +1,10 @@
 <template>
     <div>
+
+      <div v-if="isLoading" class="preloader">
+          <div class="loader"></div>
+      </div>
+
       <section>
         <div class="container-fluid m-x bg-x">
           <div class="container py-5 h-100">
@@ -57,7 +62,7 @@
                         <span v-else>Please Wait...</span>
                       </button>
 
-                      <p class="pt-3 pb-0 small text-light">Already have account?<a class="text-primary mx-2" @click.prevent="loginUser">Click here</a>to Login</p> 
+                      <p class="pt-3 pb-0 small text-light">Already have account?<a class="text-primary mx-2" @click.prevent="loginUser">Click here</a></p> 
   
                     </div>
   
@@ -95,6 +100,12 @@
           </div>
       </div>
 
+      <div class="back-to-shop">
+          <router-link to="/">
+              <img src="img/back-to-shopping.png" class="back-to-shop-img" alt="">
+          </router-link>
+      </div>
+
     </div>
 </template>
   
@@ -107,6 +118,7 @@
 
       data(){
         return{
+          isLoading: true,
           data:{
             confirmation_code: '',
             confirmation_code_match: '',
@@ -190,7 +202,13 @@
       
       mounted(){
         this.$store.state.left = false;
-      } 
+      },
+      
+      created(){
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 500);    
+      }
   }
   </script>
   

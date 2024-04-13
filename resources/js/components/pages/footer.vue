@@ -31,9 +31,9 @@
                             <h5 class="mb-4 text-white fw-bold font"><b>Usefull Links</b></h5>
                             <ul class="nav d-grid gap-1">
                                 <li class="nav-item mb-2"><router-link to="/contact" class="nav-link p-0 text-dark"> Contact Us </router-link></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> About Us </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Pricing </a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark"> Coupon </a></li>
+                                <li class="nav-item mb-2"><router-link to="/about" class="nav-link p-0 text-dark"> About Us </router-link></li>
+                                <li class="nav-item mb-2"><router-link to="/faq" class="nav-link p-0 text-dark"> Pricing </router-link></li>
+                                <li class="nav-item mb-2"><router-link to="/" class="nav-link p-0 text-dark"> Coupon </router-link></li>
                             </ul>
                         </div>
 

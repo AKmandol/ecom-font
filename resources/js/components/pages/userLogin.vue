@@ -1,6 +1,10 @@
 <template>
     <div>
       
+      <div v-if="isLoading" class="preloader">
+          <div class="loader"></div>
+      </div>
+
       <div class="container-fluid bg-x">
         <div class="container pb-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -43,7 +47,7 @@
   
                     <p class="small mt-3 mb-0"><a class="text-light" href="#" target="_blank">Forgot password? <a class="text-primary" @click.prevent="emailLogin">Click here</a> or Contact Our Support Team.</a></p>
                       
-                    <p class="pt-1 pb-0 small">Don't have any account?<a class="text-warning ml-2" @click.prevent="registerUser">Register Now</a></p> 
+                    <p class="pt-1 pb-0 small">Don't have any account?<a class="text-warning ms-2" @click.prevent="registerUser">Register Now</a></p> 
 
                     
   
@@ -130,6 +134,12 @@
             <footerMenu></footerMenu>
           </div>
       </div>
+
+      <div class="back-to-shop">
+          <router-link to="/">
+              <img src="img/back-to-shopping.png" class="back-to-shop-img" alt="">
+          </router-link>
+      </div>
   
     </div>
 </template>
@@ -142,6 +152,7 @@
       },
       data(){
         return{
+          isLoading: true,
           showPassword: false,
           confirmationModalEmail: false,
           confirmationModal: false,
@@ -320,7 +331,13 @@
       
       mounted(){
         this.$store.state.left = false;
-      }    
+      },
+      
+      created(){
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 500);    
+      }
   }
   </script>
   

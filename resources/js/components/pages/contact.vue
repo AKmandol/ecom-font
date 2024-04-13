@@ -1,10 +1,10 @@
 <template>
     <div>
-  
-        <div v-if="isLoading" class="preloader">
-            <div class="spinner"></div>
+
+        <div v-if="this.isLoading" class="preloader">
+            <div class="loader"></div>
         </div>
-       
+
         <div class="container-fluid bg-dark mb-5 position-relative">
 
             <div class="row">
@@ -16,17 +16,17 @@
                     <div class="row text-center p-2">
                         <router-link to="/faq" class="bg-white px-3 py-2 border shadow rounded col-md-3 col-sm-12">
                             <b-icon-grid-fill class="d-inline nav-icon" width="15" height="15"></b-icon-grid-fill>
-                            <span class="d-inline ml-2 text-dark fw-bold mr-2">FAQ</span>
+                            <span class="d-inline ml-2 text-dark fw-bold ms-2">FAQ</span>
                         </router-link>
                         <span class="text-secondary my-auto mx-auto col-auto"><b-icon-arrow-bar-left class="d-inline nav-icon" width="25" height="25"></b-icon-arrow-bar-left></span>
                         <router-link to="/about" class="bg-white px-3 py-2 border shadow rounded col-md-3 col-sm-12">
                             <b-icon-trophy class="d-inline nav-icon" width="15" height="15"></b-icon-trophy>
-                            <span class="d-inline text-dark fw-bold ml-2">About Us</span>
+                            <span class="d-inline text-dark fw-bold ms-2">About Us</span>
                         </router-link>
                         <span class="text-secondary my-auto mx-auto col-auto"><b-icon-arrow-bar-left class="d-inline nav-icon" width="25" height="25"></b-icon-arrow-bar-left></span>
                         <router-link to="/contact" class="main-color px-3 py-2 border shadow rounded col-md-3 col-sm-12">
                             <b-icon-telephone class="d-inline text-white" width="15" height="15"></b-icon-telephone>
-                            <span class="d-inline text-light fw-bold ml-2">Contact Us</span>
+                            <span class="d-inline text-light fw-bold ms-2">Contact Us</span>
                         </router-link>
                     </div>
                 </div>
@@ -143,6 +143,12 @@
             <footerMenu></footerMenu>
         </div>
 
+        <div class="back-to-shop">
+            <router-link to="/">
+                <img src="img/back-to-shopping.png" class="back-to-shop-img" alt="">
+            </router-link>
+        </div>
+
 </div>
 </template>
   
@@ -182,8 +188,10 @@ export default {
         this.$store.state.left = false;
     },
 
-    async created(){
-        
+    created(){
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 500);       
     }
 
 }

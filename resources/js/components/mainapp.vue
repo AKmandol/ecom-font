@@ -14,7 +14,7 @@
                 <div class="mr-x" :class="this.$store.state.left ? 'left-custom' : 'no-left-cart' " >
                 
                     <router-view></router-view>
-                   
+
                 </div>
                
                 <!-- <div class="mx-auto">
@@ -52,6 +52,7 @@
         data() {
             return {
                 menu: this.$store.state.left,
+                isLoading: true,
 
                 mainContent:{
                      
@@ -173,4 +174,56 @@
     text-align: center;
 }
 
+/* Loader CSS */
+/* HTML: <div class="loader"></div> */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.842);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 65px;
+  height: 117px;
+  position: fixed;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff8001;    
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);;
+}
+.loader:after {
+  animation: l8 1s infinite;
+  transform: perspective(300px) translateZ(0px)
+}
+@keyframes l8 {
+  to {transform:perspective(300px) translateZ(180px);opacity:0}
+}
+
+
+/* back-to-shop */
+.back-to-shop{
+    position: fixed;
+    top: 40%;
+    left: 0;
+}
+
+.back-to-shop-img{
+    width: 150px;
+    transition: all .5s ease;
+}
+.back-to-shop-img:hover{
+    padding: 2px;
+}
 </style>
