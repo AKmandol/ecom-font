@@ -10,6 +10,7 @@ import LocationPage from './components/pages/location.vue'
 import Faq from './components/pages/faq.vue'
 import About from './components/pages/about.vue'
 import Contact from './components/pages/contact.vue'
+import Shipping from './components/pages/shipping.vue'
 import userDashboard from './components/user/userDashboard.vue'
 
 
@@ -95,6 +96,12 @@ const routes = [
     path: '/cart', 
     name: '/cart',
     component: SideCart 
+  },
+ 
+  { 
+    path: '/shipping', 
+    name: '/Shipping',
+    component: Shipping 
   },
  
 

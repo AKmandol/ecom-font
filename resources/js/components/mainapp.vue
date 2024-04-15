@@ -189,26 +189,32 @@
   z-index: 9999;
 }
 
+/* HTML: <div class="loader"></div> */
 .loader {
-  width: 65px;
-  height: 117px;
-  position: fixed;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  --c:no-repeat linear-gradient(#25b09b 0 0);
+  background:
+    var(--c) center/100% 10px,
+    var(--c) center/10px 100%;
 }
-.loader:before,
-.loader:after {
-  content: "";
+.loader:before {
+  content:'';
   position: absolute;
   inset: 0;
-  background: #ff8001;    
-  box-shadow: 0 0 0 50px;
-  clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);;
+  background:
+    var(--c) 0    0,
+    var(--c) 100% 0,
+    var(--c) 0    100%,
+    var(--c) 100% 100%;
+  background-size: 15.5px 15.5px;
+  animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
 }
-.loader:after {
-  animation: l8 1s infinite;
-  transform: perspective(300px) translateZ(0px)
-}
-@keyframes l8 {
-  to {transform:perspective(300px) translateZ(180px);opacity:0}
+@keyframes l16 {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
 }
 
 
