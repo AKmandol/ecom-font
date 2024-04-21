@@ -7,16 +7,13 @@
         <div class="container-fluid m-x">
            
 
-            <div class="row my-5 main-color">
+            <div class="row main-bg">
 
-                <div class="col-lg-5 text-center"> 
-                
+                <!-- <div class="col-lg-5 text-center"> 
                     <img src="assets/homeLeft.jpg" class="img-fluid rounded-right" alt="..." />
-                    
                 </div>
 
                 <div class="col-lg-7 p-3 col-lg-5 my-auto"> 
-
                     <div id="carouselExampleInterval" class="carousel slide carousel-fade my-auto" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item bg-white rounded-left active">
@@ -35,21 +32,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-
-                    <!-- <div class="text-center my-3">
-                        <a class="btn btn-warning fw-bold" href="#">View All Offer</a>
-                    </div> -->
-                    
-
-                </div>
+                </div> -->
 
             </div>   
-
-          
-
-            <div>
-                <Shop></Shop>
-            </div>
 
             <div class="row card my-4" v-if="p">
 
@@ -538,6 +523,196 @@
             
         </div>
 
+        <div class="container my-4">
+            <div class="row">
+                <h5 class="text-dark text-start mb-2 px-0 fw-bold"><b-icon-arrows-move class="d-inline text-danger me-2 my-auto" width="22" height="22"></b-icon-arrows-move>Categories</h5>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p1.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Half Sleeve T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p2.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Full Sleeve T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p3.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Polo T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p4.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Underwear</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p5.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Panjabi</p>
+                </div>
+                
+
+
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p6.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Half Sleeve T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p7.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Full Sleeve T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p8.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Polo T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p9.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Underwear</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p10.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Panjabi</p>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p1.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Half Sleeve T-Shirt</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 bg-white border category">
+                    <a href="#"><img src="assets/product/p2.png" class="img-fluid" alt=""></a>
+                    <p class="text-dark">Full Sleeve T-Shirt</p>
+                </div>
+            
+                <div class="text-center mt-4">
+                    <Page :total="30" />
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <div class="row">
+                <h5 class="text-dark text-start mb-2 px-0 fw-bold"><b-icon-trophy class="d-inline text-danger me-2 my-auto" width="22" height="22"></b-icon-trophy>New Arrival</h5>
+                
+                <div class="col-lg-2 col-md-6">
+                    <a href="/single-product">
+                        <div class="arrival-main">
+                            <img src="assets/product/p1.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Polo T-shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p2.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Underwear</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p3.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Panjabi</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p4.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Full Sleeve T-Shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p5.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Half Sleeve T-Shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p6.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Polo T-shirt</P>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p7.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Polo T-shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p8.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Underwear</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p9.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Panjabi</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p10.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Full Sleeve T-Shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#"> 
+                        <div class="arrival-main">
+                            <img src="assets/product/p1.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Half Sleeve T-Shirt</P>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#">
+                        <div class="arrival-main">
+                            <img src="assets/product/p2.png" class="img-fluid" alt="">
+                            <P class="arrival-p position-absolute top-0 start-50 translate-middle-x">Polo T-shirt</P>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <Page :total="40" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <div class="row">
+                <h5 class="text-dark fw-bold text-start mb-4 px-0"><b-icon-arrow-through-heart-fill class="d-inline text-danger me-2 my-auto" width="22" height="22"></b-icon-arrow-through-heart-fill>Just For You</h5>
+                
+                <Shop></Shop>
+                
+            </div>
+        </div>
+
+        <div>
+            
+        </div>
+
         <div class="mx-auto d-none d-lg-block m-0 p-0">
             <sidebarLeft></sidebarLeft>
         </div>
@@ -555,7 +730,6 @@
 import Shop from "./shop.vue";    
 import footerMenu from "./footer.vue"
 import sidebarLeft from "./sidebar/sidebarLeft.vue"
-
 
 export default {
 
@@ -593,6 +767,14 @@ export default {
 </script>
 
 <style scoped>
+
+.main-bg{
+    background-image: url("/assets/bg/banner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 240px 400px;
+}
 
 .mr-x{
     margin-left:  0;
@@ -672,23 +854,7 @@ export default {
     cursor: pointer;
 }
 
-.form-select {
-    width: 100%;
-    padding: 0.375rem 2.25rem 0.375rem 1rem;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #f8fafc;
-    background-position: right rem center;
-    background-size: 8px 10px;
-    background-position: right 0.4rem center;
-    border: 1px solid #ced4da;
-    border-radius: 0.375rem;
-}
-.form-control {
-    line-height: 1.5;
-    font-size: 0.8rem;
-}
+
 
 .text1-truncate {
     display: -webkit-box;
@@ -698,4 +864,73 @@ export default {
     text-overflow: ellipsis;
 }
 
+.category{
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+}
+
+.category img{
+    width: 70px;
+    padding: 13px;
+}
+
+.category p{
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.category:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2)  !important;
+    transform: scale(1.01);
+    cursor: pointer; 
+}
+
+.arrival-main{
+    /* background: #D9DCDF; */
+    --s: 50px;
+    --c: #ffffff;
+    --_s: calc(2 * var(--s)) calc(2 * var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #e4dede00 66%, #e7e7e7 68% 70%, #0000 72%;
+    background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) /var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+    /* background-attachment: fixed; */
+    
+    position: relative;
+    margin: 10px 0px ;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.arrival-main img{
+    padding: 30px;
+}
+
+.arrival-main:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2)  !important;
+    transform: scale(1.01);
+    border:.5px solid #b6b6b6;
+}
+
+.arrival-p{
+    color: #212529;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    background: rgb(238, 238, 238);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 4px 15px;
+    border-bottom: .5px solid #b6b6b6;
+    border-left: .5px solid #b6b6b6;
+    border-right: .5px solid #b6b6b6;
+}
 </style>

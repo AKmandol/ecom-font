@@ -52,14 +52,14 @@
 
 
                             <div class="nav-item col-lg-2 col-md-12 d-flex align-items-center justify-content-center justify-content-lg-end p-0 m-0">
-                                <Dropdown>
+                                <Dropdown trigger="click">
                                     <a href="javascript:void(0)">
                                         <img src="img/man.webp"  class="me-2 border p-1 rounded-circle text-dark bg-seconary" width="35" height="35" />
                                         <span :style="headerStyles">Amlan kumar...</span>
                                         <Icon type="ios-arrow-down"></Icon>
                                     </a>
                                     <template #list>
-                                        <DropdownMenu>
+                                        <DropdownMenu style="width: 150px">
                                             <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Login</router-link></DropdownItem>
                                             <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Logout</router-link></DropdownItem>
                                             <DropdownItem><router-link :style="headerStylesDrop" to="/resister-user"><b-icon-capslock width="16" height="16" class="me-1 text-secondary"></b-icon-capslock> Register</router-link></DropdownItem>
@@ -92,121 +92,121 @@
 
                             <Menu accordion active-name="2-3" :open-names="['2']" class="menu-main">
 
-                                <Submenu class="submenu" name="0">
-                                    <template class="menu-submenu-title" #title>
-                                        <img src="assets/product/p2.png" height="30" width="30" class="rounded mr-2" alt="Logo not found">
-                                        Phone
+                                <Submenu name="0" class="submenu">
+                                    <template :style="menuTitle" #title>
+                                        <img src="assets/product/p2.png" height="30" width="30" class="rounded mr-2 p-1" alt="Logo not found">
+                                        Half Sleeve T-Shirt
                                     </template>
                                     <MenuItem class="py-1 my-0" name="1-1">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Apple
+                                            <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Blank
                                         </router-link>
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="1-2">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            One Plus
+                                            <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Cut & Stitch
                                         </router-link>    
                                     </MenuItem>
                                 </Submenu>
 
-                                <Submenu class="submenu" name="1">
-                                    <template class="menu-submenu-title" #title>
-                                        <img src="assets/product/p9.png" height="30" width="30" class="rounded mr-2" alt="Logo not found">
-                                        Food
+                                <Submenu name="1" class="submenu">
+                                    <template :style="menuTitle" #title>
+                                        <img src="assets/product/p9.png" height="30" width="30" class="rounded mr-2 p-1" alt="Logo not found">
+                                        Polo T-Shirt
                                     </template>
                                     <MenuItem class="py-1 my-0" name="1-1">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p1.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Cake
+                                            <img src="assets/product/p1.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Classic
                                         </router-link>
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="1-2">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p2.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Chips
+                                            <img src="assets/product/p2.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Printed
                                         </router-link>    
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="1-3">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p3.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Drinks
+                                            <img src="assets/product/p3.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Casual Shirt
                                         </router-link>
                                     </MenuItem>
                                 </Submenu>
-
-                                <Submenu class="submenu" name="4">
-                                    <template class="menu-submenu-title" #title>
-                                        <img src="assets/product/p3.png" height="30" width="30" class="rounded mr-2" alt="Logo not found">
-                                        Watch
+                                
+                                <Submenu name="4" class="submenu">
+                                    <template :style="menuTitle" #title>
+                                        <img src="assets/product/p3.png" height="30" width="30" class="rounded mr-2 p-1" alt="Logo not found">
+                                        Underwear
                                     </template>
                                     <MenuItem class="py-1 my-0" name="4-1">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p6.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Analoge
+                                            <img src="assets/product/p6.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Boxer Brief
                                         </router-link>  
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="4-2">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p4.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Smart
+                                            <img src="assets/product/p4.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Boxer Shorts
                                         </router-link>  
                                     </MenuItem>
                                 </Submenu>
 
-                                <Submenu class="submenu" name="2">
-                                    <template class="menu-submenu-title" #title>
-                                        <img src="assets/product/p4.png" height="30" width="30" class="rounded mr-2" alt="Logo not found">
-                                        Beauty
+                                <Submenu name="2" class="submenu">
+                                    <template :style="menuTitle" #title>
+                                        <img src="assets/product/p4.png" height="30" width="30" class="rounded mr-2 p-1" alt="Logo not found">
+                                        Womens
                                     </template>
                                     <MenuItem class="py-1 my-0" name="2-1">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Face
+                                            <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            T-Shirt
                                         </router-link>
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="2-2">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Body
+                                            <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Comfy Trouser
                                         </router-link>
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="2-3">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p5.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Hair
+                                            <img src="assets/product/p5.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Kurti Tunic And Tops
                                         </router-link>
                                     </MenuItem>
                                     <MenuItem class="py-1 my-0" name="2-4">
                                         <router-link :to="{name: '/shop'}" class="text-dark">
-                                            <img src="assets/product/p9.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                            Skin
+                                            <img src="assets/product/p9.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                            Pajamas
                                         </router-link>
                                     </MenuItem>
                                 </Submenu>
 
-                                <Submenu class="submenu" name="3">
-                                    <template class="menu-submenu-title" #title>
-                                        <img src="assets/product/p5.png" height="30" width="30" class="rounded mr-2" alt="Logo not found">
-                                        Dress
+                                <Submenu name="3" class="submenu">
+                                    <template :style="menuTitle" #title>
+                                        <img src="assets/product/p5.png" height="30" width="30" class="rounded mr-2 p-1" alt="Logo not found">
+                                        Winter Exclusive
                                     </template>
                                     <MenuGroup title="Men">
                                         <MenuItem class="py-1 my-0" name="3-1">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p6.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                                Pant
+                                                <img src="assets/product/p6.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                                Full Sleeve T-Shirt
                                         </router-link>
                                         </MenuItem>
                                         <MenuItem class="py-1 my-0" name="3-2">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                                Shirt
+                                                <img src="assets/product/p7.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                                Hoodie
                                         </router-link>
                                         </MenuItem>
                                         <MenuItem class="py-1 my-0" name="3-3">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
+                                                <img src="assets/product/p8.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
                                                 T-shirt
                                         </router-link>
                                         </MenuItem>
@@ -214,50 +214,51 @@
                                     <MenuGroup title="Women">
                                         <MenuItem class="py-1 my-0" name="3-4">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p9.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                                Sari
+                                                <img src="assets/product/p9.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                                Jacket
                                         </router-link>
                                         </MenuItem>
                                         <MenuItem class="py-1 my-0" name="3-5">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p10.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
+                                                <img src="assets/product/p10.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
                                                 T-shirt
                                         </router-link>
                                         </MenuItem>
                                         <MenuItem class="py-1 my-0" name="3-6">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p1.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
+                                                <img src="assets/product/p1.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
                                                 Pant
                                         </router-link>
                                         </MenuItem>
                                         <MenuItem class="py-1 my-0" name="3-7">
                                             <router-link :to="{name: '/shop'}" class="text-dark">
-                                                <img src="assets/product/p3.png" height="25" width="25" class="rounded mr-2" alt="Logo not found">
-                                                Sun Glass
+                                                <img src="assets/product/p3.png" height="25" width="25" class="rounded mr-2 p-1" alt="Logo not found">
+                                                Joggers
                                         </router-link>
                                         </MenuItem>
                                     </MenuGroup>
                                 </Submenu>
 
-                                <Dropdown class="mt-2 text-center">
-                                <a href="javascript:void(0)">
-                                    <img src="img/man.webp"  class="border p-1 rounded-circle text-dark bg-seconary me-2" width="35" height="35" />
-                                    <span class="text-light">Amlan kumar...</span>
-                                    <Icon type="ios-arrow-down"></Icon>
-                                </a>
-                                <template #list>
-                                    <DropdownMenu>
-                                        <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Login</router-link></DropdownItem>
-                                        <DropdownItem><router-link :style="headerStylesDrop" to="/user-login"><b-icon-box-arrow-in-right width="16" height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Logout</router-link></DropdownItem>
-                                        <DropdownItem><router-link :style="headerStylesDrop" to="/resister-user"><b-icon-capslock width="16" height="16" class="me-1 text-secondary"></b-icon-capslock> Register</router-link></DropdownItem>
-                                        <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-cart width="16" height="16" class="me-1 text-secondary"></b-icon-cart> Order</router-link></DropdownItem>
-                                        <DropdownItem><router-link :style="headerStylesDrop" to="/"><b-icon-person width="16" height="16" class="me-1 text-secondary"></b-icon-person> Profile</router-link></DropdownItem>
-                                    </DropdownMenu>
-                                </template>
-                            </Dropdown>
+                                <Dropdown class="mt-2 text-start col-12 menu-main" trigger="click">
+                                    <a href="javascript:void(0)">
+                                        <img src="img/man.webp"  class="border p-1 rounded-circle text-dark bg-seconary me-2" width="35" height="35" />
+                                        <span class="text-light">Amlan kumar...</span>
+                                        <Icon type="ios-arrow-down"></Icon>
+                                    </a>
+                                    <template #list>
+                                        <DropdownMenu>
+                                            <DropdownItem><router-link to="/user-login"><b-icon-box-arrow-in-right height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Login</router-link></DropdownItem>
+                                            <DropdownItem><router-link to="/user-login"><b-icon-box-arrow-in-right height="16" class="me-1 text-secondary"></b-icon-box-arrow-in-right> Logout</router-link></DropdownItem>
+                                            <DropdownItem><router-link to="/resister-user"><b-icon-capslock height="16" class="me-1 text-secondary"></b-icon-capslock> Register</router-link></DropdownItem>
+                                            <DropdownItem><router-link to="/"><b-icon-cart height="16" class="me-1 text-secondary"></b-icon-cart> Order</router-link></DropdownItem>
+                                            <DropdownItem><router-link to="/"><b-icon-person height="16" class="me-1 text-secondary"></b-icon-person> Profile</router-link></DropdownItem>
+                                        </DropdownMenu>
+                                    </template>
+                                </Dropdown>
 
                             </Menu>
-                            <div class="py-2 d-flex">
+
+                            <div class="py-2 d-flex align-items-end">
                                 <div class="col-6 d-flex align-items-center justify-content-center border-end">
                                     <router-link to="/faq" class="text-light"><b-icon-question-lg class="text-warning p-1 d-inline" width="28" height="28"></b-icon-question-lg>About Us</router-link>       
                                 </div>
@@ -316,8 +317,8 @@ export default {
             right: true,
             headerStyles: {
                 color: '#000',
-                background:'#fff',
-                img: '/img/logo_dark.png',
+                background:'rgb(206 84 5)',
+                img: '/img/logo_white.png',
                 overflow: 'visible'
             },
             
@@ -347,15 +348,15 @@ export default {
             if(scrollPosition > threshold){
                 this.headerStyles.background = '#047166'; // Change to desired background color/image
                 this.headerStyles.color = '#fff'; // Change to desired background color/image
-                this.headerStyles.img = '/img/logo_white.png'; // Change to desired background color/image
+                this.headerStyles.img = '/img/logo_dark.png'; // Change to desired background color/image
                 this.headerStylesBtn.color = '#fff'; // Change to desired background color/image
                 this.headerStylesBtn.background = '#047166'; // Change to desired background color/image
                 this.headerStylesDrop.color = '#000'; // Change to desired background color/image
                 this.headerStylesDrop.background = '#fff'; // Change to desired background color/image
             }else{ 
-                this.headerStyles.background = '#fff';
+                this.headerStyles.background = 'rgb(206 84 5)';
                 this.headerStyles.color = '#000';
-                this.headerStyles.img = '/img/logo_dark.png';
+                this.headerStyles.img = '/img/logo_white.png';
                 this.headerStylesBtn.color = '#000';
                 this.headerStylesBtn.background = '#fff';
                 this.headerStylesDrop.color = '#000';
@@ -470,7 +471,7 @@ export default {
     padding: 5px 0;
     box-shadow: .5px .5px #03695f45;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .main-color{

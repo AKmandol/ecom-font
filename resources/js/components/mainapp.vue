@@ -232,4 +232,26 @@
 .back-to-shop-img:hover{
     padding: 2px;
 }
+
+
+.ivu-tooltip-inner{
+    max-width: 400px !important;
+}
+
+.card-btn {
+  color: #fff;
+  background: #045850;
+  border: 0.5px solid rgb(0 0 0);
+  margin-left: 2px;
+  padding: 0;
+  height: 40px;
+  width: 187px;
+}
+
+.card-btn:hover {
+  color: rgb(255, 255, 255);
+  background: #cf5b02;
+  border: .5px solid #ff8a30;
+}
+
 </style>

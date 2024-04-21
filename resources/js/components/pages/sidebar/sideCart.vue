@@ -30,12 +30,12 @@
 
 
                 <div class="my-auto text-center" style="width:50%">
-                    <span class="text-gray">Cake</span>
+                    <span class="text-dark">Cake</span>
                 </div>
 
 
                 <div class="my-auto text-center" style="width:20%">
-                    <span class="text-dark">$32</span>
+                    <span class="text-dark fw-bold">$32</span>
                 </div>
 
 
@@ -60,12 +60,12 @@
 
 
                 <div class="my-auto text-center" style="width:50%">
-                    <span class="text-gray">Mobile</span>
+                    <span class="text-dark">Mobile</span>
                 </div>
 
 
                 <div class="my-auto text-center" style="width:20%">
-                    <span class="text-dark">$32</span>
+                    <span class="text-dark fw-bold">$32</span>
                 </div>
 
 
@@ -90,12 +90,12 @@
 
 
                 <div class="my-auto text-center" style="width:50%">
-                    <span class="text-gray">T-Shirt</span>
+                    <span class="text-dark">T-Shirt</span>
                 </div>
 
 
                 <div class="my-auto text-center" style="width:20%">
-                    <span class="text-dark">$32</span>
+                    <span class="text-dark fw-bold">$32</span>
                 </div>
 
 
@@ -120,12 +120,12 @@
 
 
                 <div class="my-auto text-center" style="width:50%">
-                    <span class="text-gray">New Lamp got change after one</span>
+                    <span class="text-dark">New Lamp got change after one</span>
                 </div>
 
 
                 <div class="my-auto text-center" style="width:20%">
-                    <span class="text-dark">$32</span>
+                    <span class="text-dark fw-bold">$32</span>
                 </div>
 
 
@@ -136,8 +136,9 @@
             </div>
 
             <hr class="mt-5">
-            <div class="py-2 d-flex justify-content-end">
-                <h6 class="text-right fs-6 fw-600"> <kbd>Total Amount:</kbd> <span class="text-danger fw-600">$120/=</span></h6>
+            <div class="py-2 d-flex justify-content-between">
+                <h6 class="fs-6 fw-bold text-dark me-2">  Total Amount:</h6>
+                <h6 class="fs-6 fw-bold text-danger me-2">  $120/=</h6>
             </div>
 
             <div class="drawer-icon" @click="sideCartClose">
@@ -146,7 +147,7 @@
 
             <div class="drawer-footer my-auto">
                 <router-link class="text-white" to="/order-details">
-                    <button class="btn btn-success main-color col-12 mx-auto text-center fw-bold fs-5" @click="sideCart">
+                    <button class="btn card-btn1 col-12 mx-auto text-center fw-bold fs-5" @click="sideCart">
                         <b-icon-cart-check-fill class="text-warning d-inline mr-2" width="25" height="25" ></b-icon-cart-check-fill>
                         Place Order
                     </button>
@@ -176,7 +177,7 @@
                     overflowY: 'scroll',
                     position: 'static',
                     background: 'rgba(255, 255, 255, 0.89)',
-                    margin: '50px 0px 0px 7px',
+                    margin: '52.5px 0px 0px 7px',
                     padding: '0',
                     
                 },
@@ -219,6 +220,18 @@
   opacity: 0;
 } */
 
+.card-btn1 {
+  color: #fff;
+  background: #045850;
+  border: 0.5px solid rgb(0 0 0);
+}
+
+.card-btn1:hover {
+  color: rgb(255, 255, 255);
+  background: #cf5b02;
+  border: .5px solid #ff8a30;
+}
+
 .btn-hover:hover{
     border: .5px solid red !important;
     cursor: pointer;
@@ -235,10 +248,9 @@
 }
 
 .borderX {
-    /* border-left: 10px solid rgba(57, 226, 0, 0.671);
-    border-right: 10px solid rgba(57, 226, 0, 0.671); */
     background: #047166;
 }
+
 .ivu-icon-ios-close {
     color: red !important;
 }

@@ -10,16 +10,17 @@
             <div class="p-3 row bg-light rounded mt-3 py-3 mx-auto shadow">
                     
                 <a @click="$router.go(-1)" class="col-md-4 col-sm-12 text-center text-dark text-md-start py-1 my-auto"><b-icon-arrow-bar-left class="d-inline text-primary me-2 my-auto" width="13" height="13"></b-icon-arrow-bar-left>Back to Cart</a>
-                <h5 class="text-center text-dark fw-bold col-md-4 col-sm-12 text-center text-md-center py-1 my-auto"><b-icon-info-circle class="d-inline text-secondary me-2 my-auto" width="18" height="18"></b-icon-info-circle>Shipping Information</h5>
+                <h5 class="text-center text-dark fw-bold col-md-4 col-sm-12 text-center text-md-center py-1 my-auto"><b-icon-info-circle class="d-inline text-success me-2 my-auto" width="18" height="18"></b-icon-info-circle>Shipping Information</h5>
 
                 <div class="row p-3">
 
                     <div class="col-md-8">
-                        <div class="row rounded border p-2">
+                        
+                        <div class="row rounded border p-2 bg-white">
 
                             <h6 class="text-start text-dark fw-bold mb-3 mt-2"><b-icon-geo class="d-inline text-secondary me-2 my-auto" width="20" height="20"></b-icon-geo> Delivery Address</h6>
 
-                            <div class="py-2 btn border-custom text-dark fw-bold">
+                            <div class="py-2 btn border-custom text-dark fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <b-icon-plus class="d-inline text-secondary me-2 my-auto" width="25" height="25"></b-icon-plus> Add Address
                             </div>
 
@@ -36,16 +37,15 @@
                                 </div>
                                 <div class="col-md-3 my-auto">
                                     <div class="d-flex justify-content-center justify-content-md-end">
-                                        <b-icon-trash class="d-inline text-dark mx-2 my-auto bg-light p-1 rounded" width="25" height="25"></b-icon-trash>
-                                        <b-icon-pencil-square class="d-inline text-dark mx-2 my-auto bg-light p-1 rounded" width="25" height="25"></b-icon-pencil-square>
+                                        <b-icon-trash @click="this.$store.state.deleteModal = true" class="d-inline text-dark mx-2 my-auto bg-light p-1 rounded" width="25" height="25"></b-icon-trash>
+                                        <b-icon-pencil-square data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-inline text-dark mx-2 my-auto bg-light p-1 rounded" width="25" height="25"></b-icon-pencil-square>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
 
-
-                        <div class="row rounded border p-2 mt-3">
+                        <div class="row rounded border p-2 mt-3 bg-white">
 
                             <h6 class="text-start text-dark fw-bold mb-3 mt-2"><b-icon-stopwatch class="d-inline text-secondary me-2 my-auto" width="20" height="20"></b-icon-stopwatch> Delivery Time and Date</h6>
 
@@ -73,13 +73,13 @@
                                     <div class="row">
                                         <label for="Instruction" class="col-lg-3 col-md-3 col-sm-12 col-form-label fw-bold text-dark">Instruction</label>
                                         <div class="col-lg-9 col-md-9 col-sm-12">
-                                            <textarea class="form-control" placeholder="Leave Instruction here (Optinal)" id="Instruction"></textarea>
+                                            <textarea class="form-control bg-white" placeholder="Leave Instruction here (Optinal)" id="Instruction"></textarea>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-12 mx-auto text-center mt-2 pb-3">
-                                    <a href="#" class="col btn btn-success fw-bold py-2 px-4 mt-3">PROCCED ORDER</a>
+                                    <router-link to="/payment-type" class="col card-btn btn rounded-2 fw-bold py-2 px-4 mt-3">PROCCED ORDER</router-link>
                                 </div>
 
 
@@ -112,7 +112,7 @@
                             </div>
 
                             <div class="input-group py-2">
-                                <input type="text" class="form-control form-control-sm" placeholder="Enter Cuppon Code">
+                                <input type="text" class="form-control form-control-sm bg-white" placeholder="Enter Cuppon Code">
                                 <button class="btn btn-sm btn-warning fw-bold">Apply</button>
                             </div>
 
@@ -122,18 +122,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <ul>
-                    <li v-for="(slot, index) in timeSlots" :key="index">
-                        {{ slot.start }} - {{ slot.end }}
-                    </li>
-                    </ul>
-
-                    <ul>
-                    <li v-for="(day, index) in nextFourDays" :key="index">
-                        {{ day.month }} {{ day.date }} - {{ day.name }}
-                    </li>
-                    </ul> -->
 
                 </div>
 
@@ -146,14 +134,26 @@
             <footerMenu></footerMenu>
         </div>
 
+        <div>
+            <deleteModal></deleteModal>
+        </div>
+
+        <div>
+            <addAddressModal></addAddressModal>
+        </div>
+
 </div>
 </template>
   
 <script>
 import footerMenu from "./footer.vue"
+import deleteModal from "./modal/deleteModal.vue"
+import addAddressModal from "./modal/addAddress.vue"
 export default {
     components: {
         footerMenu,
+        deleteModal,
+        addAddressModal
     },
 
     data(){
@@ -195,7 +195,7 @@ export default {
             const slots = [];
             for (let i = this.startTime; i <= this.endTime - 1; i++) {
                 const startHour = i % 12 || 12; // Convert to 12-hour format
-                const endHour = (i + 1) % 12 || 12; // Convert to 12-hour format
+                const endHour = (i + 2) % 12 || 12; // Convert to 12-hour format
                 const startAMPM = i < 12 ? 'am' : 'pm';
                 const endAMPM = (i + 1) < 12 ? 'am' : 'pm';
                 const slot = {

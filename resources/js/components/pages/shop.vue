@@ -9,7 +9,7 @@
       </ol>
     </nav> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row justify-content-center gap-1 border shadow rounded">
 
         <div class="d-flex border-custom-rd justify-content-start aling-items-center rounded p-3">
@@ -20,9 +20,9 @@
 
         <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
 
-          <img class="card-image rounded" src="assets/product/p6.png"  alt="...">
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
           <div class="mini-detais">
-            <h5 class="text-center text-dark h-40px">Product Name1</h5>
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
             <h6 class="text-center text-danger h-20px">$404</h6>
             <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
           </div>
@@ -34,36 +34,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -89,36 +101,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -130,7 +154,7 @@
 
         <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
 
-          <img class="card-image rounded" src="assets/product/p2.png"   alt="...">
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
           <div class="mini-detais">
             <h5 class="text-center text-dark h-40px">Product Name</h5>
             <h6 class="text-center text-danger h-20px">$404</h6>
@@ -144,36 +168,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -185,7 +221,7 @@
 
         <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
 
-          <img class="card-image rounded" src="assets/product/p3.png"   alt="...">
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
           <div class="mini-detais">
             <h5 class="text-center text-dark h-40px">Product Name</h5>
             <h6 class="text-center text-danger h-20px">$404</h6>
@@ -199,36 +235,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -240,7 +288,7 @@
 
         <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
 
-          <img class="card-image rounded" src="assets/product/p4.png"   alt="...">
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
           <div class="mini-detais">
             <h5 class="text-center text-dark h-40px">Product Name</h5>
             <h6 class="text-center text-danger h-20px">$404</h6>
@@ -254,36 +302,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -295,7 +355,7 @@
 
         <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
 
-          <img class="card-image rounded" src="assets/product/p5.png"   alt="...">
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
           <div class="mini-detais">
             <h5 class="text-center text-dark h-40px">Product Name</h5>
             <h6 class="text-center text-danger h-20px">$404</h6>
@@ -309,36 +369,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -366,256 +438,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
                 </Option>
-            </Select>
-            </div>
-
-            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
-          </div>
-
-        </div>
-
-        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
-
-          <img class="card-image rounded" src="assets/product/p2.png"   alt="...">
-          <div class="mini-detais">
-            <h5 class="text-center text-dark h-40px">Product Name</h5>
-            <h6 class="text-center text-danger h-20px">$404</h6>
-            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
-          </div>
-
-          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
-            <div class="text-light">
-              <kbd>Add details</kbd>
-            </div>
-
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
-                </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
-                </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
-                </Option>
-            </Select>
-            </div>
-
-            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
-          </div>
-
-        </div>
-
-        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
-
-          <img class="card-image rounded" src="assets/product/p3.png"   alt="...">
-          <div class="mini-detais">
-            <h5 class="text-center text-dark h-40px">Product Name</h5>
-            <h6 class="text-center text-danger h-20px">$404</h6>
-            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
-          </div>
-
-          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
-            <div class="text-light">
-              <kbd>Add details</kbd>
-            </div>
-
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
-                </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
-                </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
-                </Option>
-            </Select>
-            </div>
-
-            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
-          </div>
-
-        </div>
-
-        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
-
-          <img class="card-image rounded" src="assets/product/p7.png"   alt="...">
-          <div class="mini-detais">
-            <h5 class="text-center text-dark h-40px">Product Name</h5>
-            <h6 class="text-center text-danger h-20px">$404</h6>
-            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
-          </div>
-
-          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
-            <div class="text-light">
-              <kbd>Add details</kbd>
-            </div>
-
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
-                </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
-                </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
-                </Option>
-            </Select>
-            </div>
-
-            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
-          </div>
-
-        </div>
-
-        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
-
-          <img class="card-image rounded" src="assets/product/p10.png"   alt="...">
-          <div class="mini-detais">
-            <h5 class="text-center text-dark h-40px">Product Name</h5>
-            <h6 class="text-center text-danger h-20px">$404</h6>
-            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
-          </div>
-
-          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
-            <div class="text-light">
-              <kbd>Add details</kbd>
-            </div>
-
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
-            </div>
-            <div class="text-dark text-center col-8">
-              <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
-                </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
-                </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -641,36 +505,48 @@
 
             <div class="text-dark text-center col-8">
               <p class="text-sm text-white fw-semibold">Qty</p>
-              <InputNumber v-model="qty" controls-outside size="small" :min="1"/>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Size</p>
-              <Select v-model="size" label="Select Size" size="small">
-                <Option value="M" label="M">
-                    <span>M</span>
-                </Option>
-                <Option value="L" label="L">
-                    <span>L</span>
-                </Option>
-                <Option value="XL" label="XL">
-                    <span>XL</span>
-                </Option>
-                <Option value="XXL" label="XXL">
-                    <span>XXL</span>
-                </Option>
-            </Select>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
             </div>
-            <div class="text-dark text-center col-8">
+            <div class="text-dark col-8">
               <p class="text-sm text-white fw-semibold">Color</p>
-              <Select v-model="color" label="Select Color" size="small">
-                <Option value="Red" label="Red">
-                    <span>Red</span>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
                 </Option>
-                <Option value="Black" label="Black">
-                    <span>Black</span>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
                 </Option>
-                <Option value="White" label="White">
-                    <span>White</span>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
                 </Option>
             </Select>
             </div>
@@ -680,6 +556,273 @@
 
         </div>
 
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
         
       </div>
 
@@ -1355,6 +1498,823 @@
 
         
       </div>
+    </div> -->
+
+    <div class="container m-0 p-0">
+      <div class="row justify-content-center border bg-light rounded gap-1">
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p2.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p3.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p4.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p5.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p6.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p7.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p8.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p9.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p10.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p1.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 rounded card-main my-3 d-flex flex-column">
+
+          <img class="card-image rounded" src="assets/product/p2.png"   alt="...">
+          <div class="mini-detais">
+            <h5 class="text-center text-dark h-40px">Product Name</h5>
+            <h6 class="text-center text-danger h-20px">$404</h6>
+            <button class="card-btn btn rounded-2 col-12 fw-bold" @click="sideCartOpen">Add to cart</button>
+          </div>
+
+          <div class="card-overlay rounded d-flex flex-column align-items-center justify-content-between">
+            <div class="text-light">
+              <kbd>Add details</kbd>
+            </div>
+
+            <div class="text-dark text-center col-8">
+              <p class="text-sm text-white fw-semibold">Qty</p>
+              <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Size</p>
+              <Select v-model="model" placeholder="Select Size" class="col">
+                  <Option value="M" >
+                      <span class="text-dark">M</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                  </Option>
+                  <Option value="L" >
+                      <span class="text-dark">L</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                  </Option>
+                  <Option value="XL" >
+                      <span class="text-dark">XL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                  </Option>
+                  <Option value="XXL" >
+                      <span class="text-dark">XXL</span>
+                      <span style="float:right;color:#808080; padding: 5px; font-size:10px; "><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                  </Option>
+      
+              </Select>
+            </div>
+            <div class="text-dark col-8">
+              <p class="text-sm text-white fw-semibold">Color</p>
+              <Select v-model="model" placeholder="Select Color" class="col">
+                <Option value="black" >
+                    <span class="text-dark">Black</span>
+                    <span style="float:right;background:#000; padding: 5px"></span>
+                </Option>
+                <Option value="Gray" >
+                    <span class="text-dark">Gray</span>
+                    <span style="float:right;background:#808080; padding: 5px"></span>
+                </Option>
+                <Option value="Red" >
+                    <span class="text-dark">Red</span>
+                    <span style="float:right;background:#FF0000; padding: 5px"></span>
+                </Option>
+                <Option value="Green" >
+                    <span class="text-dark">Green</span>
+                    <span style="float:right;background:#008000; padding: 5px"></span>
+                </Option>
+            </Select>
+            </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn view-cart-btn py-1 text-white rounded-2 col-12">View full details <span class="text-warning ml-1"> >> </span> </button>
+          </div>
+
+        </div>
+
+
+        <div class="text-center my-2">
+                    <Page :total="20" />
+                </div>
+        
+      </div>
     </div>
    
   </div>
@@ -1420,22 +2380,6 @@ export default {
   right: 0;
   width: 200px;
   height: 200px;
-}
-
-.card-btn {
-  color: #fff;
-  background: rgba(28, 0, 54, 0.918);
-  border: 0.5px solid rgb(0 0 0);
-  margin-left: 2px;
-  padding: 0;
-  height: 40px;
-  width: 187px;
-}
-
-.card-btn:hover {
-  color: rgb(255, 255, 255);
-  background: rgba(100, 5, 252, 0.747);
-  border: .5px solid rgb(61, 0, 122);
 }
 
 .view-cart-btn {

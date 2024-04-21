@@ -11,6 +11,9 @@ import Faq from './components/pages/faq.vue'
 import About from './components/pages/about.vue'
 import Contact from './components/pages/contact.vue'
 import Shipping from './components/pages/shipping.vue'
+import Payment from './components/pages/PaymentType.vue'
+import SingleProduct from './components/pages/singleProduct.vue'
+
 import userDashboard from './components/user/userDashboard.vue'
 
 
@@ -35,7 +38,7 @@ const routes = [
     name: 'FAQ',
     component: Faq,
     meta: {
-      title: 'Shop Today-Help',
+      title: 'Shop Today - FAQ',
     }
   },
 
@@ -44,7 +47,7 @@ const routes = [
     name: 'About',
     component: About,
     meta: {
-      title: 'Shop Today-About Us',
+      title: 'Shop Today - About Us',
     }
   },
 
@@ -53,15 +56,16 @@ const routes = [
     name: 'Contact',
     component: Contact,
     meta: {
-      title: 'Shop Today-Contact Us',
+      title: 'Shop Today - Contact Us',
     }
   },
 
   { 
     path: '/shop', 
     name: '/shop',
-    component: ShopPage  
+    component: ShopPage,  
   },
+
   { 
     path: '/location', 
     name: '/location',
@@ -70,13 +74,28 @@ const routes = [
   { 
     path: '/user-login', 
     name: '/user-login',
-    component: UserLogin 
+    component: UserLogin,
+    meta: {
+      title: 'Shop Today - Login',
+    } 
   },
 
   { 
     path: '/resister-user', 
     name: '/resister-user',
-    component: ResisterLogin 
+    component: ResisterLogin,
+    meta: {
+      title: 'Shop Today - Register',
+    } 
+  },
+
+  { 
+    path: '/single-product', 
+    name: '/SingleProduct',
+    component: SingleProduct,
+    meta: {
+      title: 'Shop Today - Product',
+    } 
   },
   { 
     path: '/user-dashboard', 
@@ -84,11 +103,16 @@ const routes = [
     component: userDashboard 
   },
 
+
+
   //Order
   { 
     path: '/order-details', 
     name: '/OrderDetails',
-    component: OrderDetails 
+    component: OrderDetails,
+    meta: {
+      title: 'Shop Today - Order Details',
+    }
   },
 
  
@@ -101,7 +125,19 @@ const routes = [
   { 
     path: '/shipping', 
     name: '/Shipping',
-    component: Shipping 
+    component: Shipping,
+    meta: {
+      title: 'Shop Today - Shipping',
+    } 
+  },
+ 
+  { 
+    path: '/payment-type', 
+    name: '/PaymentType',
+    component: Payment, 
+    meta: {
+      title: 'Shop Today - Payments',
+    }
   },
  
 

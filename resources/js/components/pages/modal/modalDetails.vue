@@ -49,37 +49,56 @@
                                             <div class="col-12 py-2">
                                                 <div class="aling-middle d-flex"> 
                                                     <h6 class="text-dark fw-bold my-auto mr-2 col-4">Qunantity:</h6> 
-                                                    <p class="text-dark fw-bold mx-auto ml-2 rounded px-4 shadow-sm"> {{item}} </p> 
-                                                    <div class="d-flex ml-4 col-7">
-                                                        <b-icon-dash-circle class="btn2-hover text-dark mx-2 my-auto d-inline" @click="itemMinus" width="18" height="18"></b-icon-dash-circle>
-                                                        <b-icon-plus-circle class="btn2-hover text-success mx-2 my-auto d-inline" @click="itemPlus" width="18" height="18"></b-icon-plus-circle>
-                                                    </div>
+                                                    <InputNumber v-model="qty" controls-outside class="w-100" :min="1"/>
                                                 </div>
                                             </div>
 
                                             <div class="py-2 col-12">
                                                 <div class="aling-middle d-flex"> 
                                                     <h6 class="text-dark fw-bold my-auto mr-2 col-4">Size:</h6> 
-                                                    <select class="form-select form-select-sm col">
-                                                        <option selected>Choose Size</option>
-                                                        <option value="1">M</option>
-                                                        <option value="2">L</option>
-                                                        <option value="3">XL</option>
-                                                        <option value="4">XXL</option>
-                                                    </select>
+                                                    <Select v-model="model" placeholder="Select Size" class="col">
+                                                        <Option value="M" >
+                                                            <span class="text-dark">M</span>
+                                                            <span style="float:right;color:#808080; padding: 5px"><Span class="text-dark">C</Span>:38, <Span class="text-dark ml-1">L</Span>:27.5, <Span class="text-dark">S</Span>:8.5</span>
+                                                        </Option>
+                                                        <Option value="L" >
+                                                            <span class="text-dark">L</span>
+                                                            <span style="float:right;color:#808080; padding: 5px"><Span class="text-dark">C</Span>:40.5, <Span class="text-dark ml-1">L</Span>:28, <Span class="text-dark">S</Span>:8.75</span>
+                                                        </Option>
+                                                        <Option value="XL" >
+                                                            <span class="text-dark">XL</span>
+                                                            <span style="float:right;color:#808080; padding: 5px"><Span class="text-dark">C</Span>:43, <Span class="text-dark ml-1">L</Span>:29, <Span class="text-dark">S</Span>:9</span>
+                                                        </Option>
+                                                        <Option value="XXL" >
+                                                            <span class="text-dark">XXL</span>
+                                                            <span style="float:right;color:#808080; padding: 5px"><Span class="text-dark">C</Span>:45, <Span class="text-dark ml-1">L</Span>:30, <Span class="text-dark">S</Span>:9.25</span>
+                                                        </Option>
+                                            
+                                                    </Select>
                                                 </div>
                                             </div>
 
                                             <div class="py-2 col-12">
                                                 <div class="aling-middle d-flex"> 
                                                     <h6 class="text-dark fw-bold my-auto mr-2 col-4">Color:</h6> 
-                                                    <select class="form-select form-select-sm col">
-                                                        <option selected>Choose Color</option>
-                                                        <option value="1">Red</option>
-                                                        <option value="2">Black</option>
-                                                        <option value="3">White</option>
-                                                        <option value="4">Green</option>
-                                                    </select>
+                                                    <Select v-model="model" placeholder="Select Color" class="col">
+                                                        <Option value="black" >
+                                                            <span class="text-dark">Black</span>
+                                                            <span style="float:right;background:#000; padding: 5px"></span>
+                                                        </Option>
+                                                        <Option value="Gray" >
+                                                            <span class="text-dark">Gray</span>
+                                                            <span style="float:right;background:#808080; padding: 5px"></span>
+                                                        </Option>
+                                                        <Option value="Red" >
+                                                            <span class="text-dark">Red</span>
+                                                            <span style="float:right;background:#FF0000; padding: 5px"></span>
+                                                        </Option>
+                                                        <Option value="Green" >
+                                                            <span class="text-dark">Green</span>
+                                                            <span style="float:right;background:#008000; padding: 5px"></span>
+                                                        </Option>
+                                                    </Select>
                                                 </div>
                                             </div>  
 

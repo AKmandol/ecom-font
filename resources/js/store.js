@@ -9,7 +9,8 @@ const store = createStore({
     modelLogin: false,
     modelRegister: false,
     left: false,
-    right: false
+    right: false,
+    deleteModal: false,
   },
 
   mutations: {

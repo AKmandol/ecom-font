@@ -1,5 +1,32 @@
 <template>
     <div>
+        <div class="container-fluid bg-subs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <div class="input-group py-2">
+                            <input type="text" class="form-control bg-white" placeholder="Enter Your Email Address">
+                            <button class="btn btn-sm btn-success fw-bold px-4">Get Cuppons</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 py-2 text-center text-md-end">
+                                <a href="#" class="">
+                                    <img src="/assets/app/apple.png" height="37" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 py-2 text-center text-md-start">
+                                <a href="#" class="">
+                                    <img src="/assets/app/andriod.png" height="37" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="bg-footer container-fluid pt-3 w-100">
             <div class="container">
                 <footer class="mx-auto">
@@ -90,8 +117,15 @@ export default {
     font-weight: 700 !important;
     font-size: 20px;
 }
+
+.bg-subs { 
+    background: #012722;
+    padding: 0;
+    margin: 0;
+}
+
 .bg-footer { 
-    border-top: 1px solid #d8eaff;
+    border-top: .1px solid #9f9f9f65;
     background: #022924;
     background-image: url("/assets/bg.png");
     background-position: center; /* Center the image */
